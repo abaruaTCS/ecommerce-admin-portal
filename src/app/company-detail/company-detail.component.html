@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="col-12">
+      <div class="row justify-content-center">
+        <h4>{{ name }}</h4>
+      </div>
+      <div class="row justify-content-center">
+        <a class="nav-link active" [routerLink]="['/companies-list']"
+          >Go Back</a
+        >
+        &nbsp;&nbsp;&nbsp;
+        <a
+          class="nav-link active"
+          [routerLink]="['/updateCompanyDetail', { name: name, id: id }]"
+          >Update</a
+        >
+        &nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-secondary" (click)="delete()">
+          Delete
+        </button>
+        <!-- <a class="nav-link active" href="javascript:delete();">Delete</a> -->
+      </div>
+    </div>
+  </div>
+</div>

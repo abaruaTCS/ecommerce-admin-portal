@@ -1,0 +1,13 @@
+.container {
+  text-align: center;
+}
+
+label {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#cname {
+  margin-bottom: 1em;
+  width: 40%;
+}

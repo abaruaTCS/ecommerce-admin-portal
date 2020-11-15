@@ -1,0 +1,9 @@
+<div class="container">
+  <form [formGroup]="companyRef" (ngSubmit)="addCompany()">
+    <label>Company Name</label>
+    <br />
+    <input type="text" id="cname" formControlName="cname" />
+    <br />
+    <input type="submit" value="Add" />
+  </form>
+</div>

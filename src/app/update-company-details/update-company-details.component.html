@@ -1,0 +1,7 @@
+<div class="container">
+  <form [formGroup]="companyRef" (ngSubmit)="update()">
+    <label>Company Name</label><br />
+    <input type="text" formControlName="cname" /><br />
+    <input type="submit" />
+  </form>
+</div>
