@@ -1,0 +1,15 @@
+.container {
+  text-align: center;
+}
+
+.jumbotron {
+  margin-top: 2em;
+}
+
+input {
+  width: 40%;
+}
+
+#submit {
+  width: auto;
+}

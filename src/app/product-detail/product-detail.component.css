@@ -1,0 +1,32 @@
+.container {
+  text-align: center;
+}
+
+.jumbotron {
+  margin-top: 2em;
+}
+
+.row {
+  margin-top: 2em;
+}
+
+.price {
+  margin-right: 4em;
+}
+
+a {
+  background-color: gray;
+  border: 1px gray;
+  border-radius: 4px;
+  color: white;
+  margin-top: 1em;
+}
+
+button {
+  width: auto;
+  height: 50px;
+  margin-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: gray;
+}

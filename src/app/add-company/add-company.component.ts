@@ -9,6 +9,7 @@ import { Company } from '../models/company';
   styleUrls: ['./add-company.component.css'],
 })
 export class AddCompanyComponent implements OnInit {
+  notify: string;
   companyRef = new FormGroup({
     cname: new FormControl(),
   });
@@ -21,8 +22,11 @@ export class AddCompanyComponent implements OnInit {
     let name = this.companyRef.value['cname'];
     var company = new Company();
     company.name = name;
-    this.companyService
-      .addCompany(company)
-      .subscribe((data) => console.log(data));
+    this.companyService.addCompany(company).subscribe((data) => {
+      console.log(data);
+      if (data) {
+        this.notify = 'Company Added Successfully!';
+      }
+    });
   }
 }

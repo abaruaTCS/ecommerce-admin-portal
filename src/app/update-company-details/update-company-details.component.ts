@@ -10,6 +10,7 @@ import { CompanyService } from '../services/company.service';
   styleUrls: ['./update-company-details.component.css'],
 })
 export class UpdateCompanyDetailsComponent implements OnInit {
+  notify: string;
   companyRef = new FormGroup({
     cname: new FormControl(),
   });
@@ -33,8 +34,9 @@ export class UpdateCompanyDetailsComponent implements OnInit {
     var c = new Company();
     c.name = this.companyRef.value['cname'];
     console.log(this.id);
-    this.companySrvice
-      .updateCompanyById(c, this.id)
-      .subscribe((data) => console.log(data));
+    this.companySrvice.updateCompanyById(c, this.id).subscribe((data) => {
+      console.log(data);
+      this.notify = 'Company Updated Successfully!';
+    });
   }
 }

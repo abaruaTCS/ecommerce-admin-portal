@@ -9,6 +9,7 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./add-product.component.css'],
 })
 export class AddProductComponent implements OnInit {
+  notify: string;
   productRef = new FormGroup({
     // code: new FormControl(),
     name: new FormControl(),
@@ -30,8 +31,11 @@ export class AddProductComponent implements OnInit {
     product.image = this.productRef.value['image'];
     product.price = this.productRef.value['price'];
     product.company = this.productRef.value['company'];
-    this.productService
-      .addProduct(product)
-      .subscribe((data) => console.log(data));
+    this.productService.addProduct(product).subscribe((data) => {
+      console.log(data);
+      if (data) {
+        this.notify = 'Product Added Successfully!';
+      }
+    });
   }
 }

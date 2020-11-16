@@ -1,5 +1,8 @@
+.jumbotron {
+  margin-top: 2em;
+}
+
 a {
-  margin-top: 1em;
   margin-bottom: 1em;
   border: 1px gray;
   background-color: gray;
@@ -7,6 +10,6 @@ a {
   border-radius: 4px;
 }
 
-#cdetail {
-  width: 50%;
+#pdetail {
+  width: 29%;
 }

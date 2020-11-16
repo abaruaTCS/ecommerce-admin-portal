@@ -10,6 +10,7 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./update-product-details.component.css'],
 })
 export class UpdateProductDetailsComponent implements OnInit {
+  notify: string;
   name: string;
   id: string;
   image: string;
@@ -50,8 +51,9 @@ export class UpdateProductDetailsComponent implements OnInit {
     p.image = this.productRef.value['image'];
     p.price = this.productRef.value['price'];
     p.name = this.productRef.value['name'];
-    this.productService
-      .updateProductById(p, this.id)
-      .subscribe((data) => console.log(data));
+    this.productService.updateProductById(p, this.id).subscribe((data) => {
+      console.log(data);
+      this.notify = 'Product Updated Successfully!';
+    });
   }
 }
