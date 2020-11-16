@@ -18,6 +18,8 @@ import { CompanyDetailComponent } from './company-detail/company-detail.componen
 import { UpdateCompanyDetailsComponent } from './update-company-details/update-company-details.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { UpdateProductDetailsComponent } from './update-product-details/update-product-details.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { AddProductComponent } from './add-product/add-product.component';
     UpdateCompanyDetailsComponent,
     ProductsListComponent,
     AddProductComponent,
+    ProductDetailComponent,
+    UpdateProductDetailsComponent,
   ],
   imports: [
     BrowserModule,

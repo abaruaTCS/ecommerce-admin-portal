@@ -11,5 +11,5 @@ module.exports = function (app) {
 
   app.delete("/api/companies/:id", companies.removeById);
 
-  app.get("/api/products", companies.findProducts);
+  // app.get("/api/products", companies.findProducts);
 };

@@ -12,6 +12,8 @@ import { CompanyDetailComponent } from './company-detail/company-detail.componen
 import { UpdateCompanyDetailsComponent } from './update-company-details/update-company-details.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ProductsListComponent } from './products-list/products-list.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { UpdateProductDetailsComponent } from './update-product-details/update-product-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -45,6 +47,21 @@ const routes: Routes = [
   {
     path: 'products-list',
     component: ProductsListComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'products-list',
+    component: ProductsListComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'productDetail',
+    component: ProductDetailComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'updateProductDetail',
+    component: UpdateProductDetailsComponent,
     canActivate: [AuthGuard],
   },
 ];

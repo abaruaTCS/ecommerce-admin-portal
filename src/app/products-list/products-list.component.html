@@ -14,15 +14,10 @@
             </tr>
           </thead>
           <tbody>
-            <!-- switch company to product -->
-            <!-- update component ts -->
-            <!-- add product model -->
-            <!-- add product service -->
-            <tr *ngFor="let product of companies; let rowIndex = index">
+            <tr *ngFor="let product of products; let rowIndex = index">
               <td>{{ rowIndex + 1 }}</td>
               <td>{{ product.name }}</td>
               <td>
-                <!-- add a product detail component -->
                 <a
                   class="nav-link active"
                   id="pdetail"

@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="col-12">
+      <div class="row justify-content-center">
+        <h4>{{ name }}</h4>
+      </div>
+      <div class="row justify-content-center">
+        <div>
+          <img src="../../assets/{{ image }}" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-6">{{ price }}</div>
+        <div class="col-6">{{ company }}</div>
+      </div>
+      <div class="row justify-content-center">
+        <p>{{ details }}</p>
+      </div>
+      <div class="row justify-content-center">
+        <a class="nav-link active" [routerLink]="['/products-list']">Go Back</a>
+        &nbsp;&nbsp;&nbsp;
+        <a
+          class="nav-link active"
+          [routerLink]="[
+            '/updateProductDetail',
+            {
+              name: name,
+              id: id,
+              image: image,
+              company: company,
+              price: price,
+              details: details
+            }
+          ]"
+          >Update</a
+        >
+        &nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-secondary" (click)="delete()">
+          Delete
+        </button>
+        <!-- <a class="nav-link active" href="javascript:delete();">Delete</a> -->
+      </div>
+    </div>
+  </div>
+</div>

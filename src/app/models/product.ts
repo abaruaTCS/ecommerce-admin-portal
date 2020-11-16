@@ -4,8 +4,5 @@ export class Product {
   details: string;
   image: string;
   price: string;
-}
-
-export class Products {
-  products: Product[];
+  company: string;
 }

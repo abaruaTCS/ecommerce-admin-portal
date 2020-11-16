@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Company } from '../models/company';
-import { Product } from '../models/product';
+// import { Product } from '../models/product';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
@@ -52,11 +52,11 @@ export class CompanyService {
     return this.http.delete<Company>(`${this.companyUrl}/${id}`);
   }
 
-  getProducts(): Observable<Product> {
-    // return this.getCompanies()['products'];
+  // getProducts(): Observable<Product> {
+  //   // return this.getCompanies()['products'];
 
-    return this.http.get<Product>(this.productUrl);
-  }
+  //   return this.http.get<Product>(this.productUrl);
+  // }
 }
 
 // import { Injectable } from '@angular/core';

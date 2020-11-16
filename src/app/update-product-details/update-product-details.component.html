@@ -1,0 +1,17 @@
+<div class="container">
+  <form [formGroup]="productRef" (ngSubmit)="update()">
+    <!-- <label>Product Code</label><br />
+    <input type="text" formControlName="code" /><br /> -->
+    <label>Product Name</label><br />
+    <input type="text" formControlName="name" [value]="name" /><br />
+    <label>Product Details</label><br />
+    <input type="text" formControlName="details" [value]="details" /><br />
+    <label>Product Image</label><br />
+    <input type="text" formControlName="image" [value]="image" /><br />
+    <label>Product Price</label><br />
+    <input type="text" formControlName="price" [value]="price" /><br />
+    <label>Product Company</label><br />
+    <input type="text" formControlName="company" [value]="company" /><br />
+    <input type="submit" value="Add" />
+  </form>
+</div>

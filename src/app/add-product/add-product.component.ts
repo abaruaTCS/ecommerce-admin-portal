@@ -10,7 +10,7 @@ import { ProductService } from '../services/product.service';
 })
 export class AddProductComponent implements OnInit {
   productRef = new FormGroup({
-    code: new FormControl(),
+    // code: new FormControl(),
     name: new FormControl(),
     details: new FormControl(),
     image: new FormControl(),
@@ -24,7 +24,7 @@ export class AddProductComponent implements OnInit {
 
   addProduct(): void {
     var product = new Product();
-    product._id = this.productRef.value['code'];
+    // product._id = this.productRef.value['code'];
     product.name = this.productRef.value['name'];
     product.details = this.productRef.value['details'];
     product.image = this.productRef.value['image'];
