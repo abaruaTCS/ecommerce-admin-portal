@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Company } from '../models/company';
 import { Product } from '../models/product';
+import { CompanyService } from '../services/company.service';
 import { ProductService } from '../services/product.service';
 
 @Component({
@@ -18,10 +20,19 @@ export class AddProductComponent implements OnInit {
     price: new FormControl(),
     company: new FormControl(),
   });
+  companies: Company[];
 
-  constructor(private productService: ProductService) {}
+  constructor(
+    private productService: ProductService,
+    private companyService: CompanyService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.companyService.getCompanies().subscribe((result) => {
+      this.companies = result;
+      console.log(result);
+    });
+  }
 
   addProduct(): void {
     var product = new Product();

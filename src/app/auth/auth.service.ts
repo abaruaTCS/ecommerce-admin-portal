@@ -13,16 +13,16 @@ class DecodedToken {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
-
   private uriseg = 'http://localhost:5000/api/users';
   private decodedToken;
 
   constructor(private http: HttpClient) {
-    this.decodedToken = JSON.parse(localStorage.getItem('auth_meta')) || new DecodedToken();
-   }
+    this.decodedToken =
+      JSON.parse(localStorage.getItem('auth_meta')) || new DecodedToken();
+  }
 
   public register(userData: any): Observable<any> {
     const URI = this.uriseg + '/register';
@@ -31,9 +31,11 @@ export class AuthService {
 
   public login(userData: any): Observable<any> {
     const URI = this.uriseg + '/login';
-    return this.http.post(URI, userData).pipe(map(token => {
-      return this.saveToken(token);
-    }));
+    return this.http.post(URI, userData).pipe(
+      map((token) => {
+        return this.saveToken(token);
+      })
+    );
   }
 
   private saveToken(token: any): any {

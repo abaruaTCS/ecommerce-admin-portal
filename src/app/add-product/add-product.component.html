@@ -15,7 +15,13 @@
       <label>Product Price</label><br />
       <input type="text" formControlName="price" /><br />
       <label>Product Company</label><br />
-      <input type="text" formControlName="company" /><br />
+      <select name="" id="comp" class="custom-select">
+        <option selected>Choose...</option>
+        <option *ngFor="let company of companies" value="">
+          {{ company.name }}
+        </option></select
+      ><br /><br />
+      <!-- <input type="text" formControlName="company" /><br /> -->
       <br />
       <input type="submit" id="submit" value="Add" /><br /><br />
       <a class="nav-link active" [routerLink]="['/products-list']">Go Back</a>
